@@ -1,9 +1,23 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home'
-import Footer from './components/Footer/Footer'
 import Layout from './components/layout/Layout'
-import Header from './components/Header/Header'
+
+// Sample page components
+const About = () => (
+  <div>
+    <h2>About Us</h2>
+    <p>This is the about page of our application.</p>
+  </div>
+);
+
+const Contact = () => (
+  <div>
+    <h2>Contact</h2>
+    <p>Get in touch with us!</p>
+    <p>Email: contact@example.com</p>
+  </div>
+);
 
 const router = createBrowserRouter([
   {
@@ -15,12 +29,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "header",
-        element: <Header />
+        path: "about",
+        element: <About />
       },
       {
-        path: "footer",
-        element: <Footer />
+        path: "contact",
+        element: <Contact />
       }
     ]
   }
